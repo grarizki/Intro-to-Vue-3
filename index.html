@@ -19,6 +19,10 @@
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <!-- src attribute bound to the image data -->
+            <img v-bind:src="image" alt="kaos kaki hejo" />
+            <!-- shorthand for attribute binding -->
+            <a :href="url">Vue Mastery</a>
           </div>
         </div>
       </div>
