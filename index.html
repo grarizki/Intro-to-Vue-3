@@ -12,6 +12,8 @@
     <div id="app">
       <div class="nav-bar"></div>
 
+      <div class="cart">Cart({{ cart }})</div>
+
       <div class="product-display">
         <div class="product-container">
           <div class="product-image">
@@ -21,18 +23,13 @@
             <h1>{{ product }}</h1>
             <p v-if="inStock">In Stock</p>
             <p v-else>Out of Stock</p>
-            <!-- detail itu alias, details itu collection -->
-            <!-- alias itu yang ngeloop didalem collection -->
             <ul>
-              <li v-for="detail in details">{{detail}}</li>
+              <li v-for="detail in details">{{ detail }}</li>
             </ul>
             <div v-for="variant in variants" :key="variant.id">
-              {{variant.color}}
+              {{ variant.color }}
             </div>
-            <!-- loop for inside an array -->
-            <!-- binding key an alias for the index-->
-            <!-- (or the key if used on an Object) -->
-            <div v-for="(size, index) in sizes" :key="index">{{size}}</div>
+            <button class="button" v-on:click="addToCart">Add to Cart</button>
           </div>
         </div>
       </div>
