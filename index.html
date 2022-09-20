@@ -26,7 +26,13 @@
             <ul>
               <li v-for="detail in details">{{detail}}</li>
             </ul>
-            <div v-for="variant in variants">{{variant.color}}</div>
+            <div v-for="variant in variants" :key="variant.id">
+              {{variant.color}}
+            </div>
+            <!-- loop for inside an array -->
+            <!-- binding key an alias for the index-->
+            <!-- (or the key if used on an Object) -->
+            <div v-for="(size, index) in sizes" :key="index">{{size}}</div>
           </div>
         </div>
       </div>
