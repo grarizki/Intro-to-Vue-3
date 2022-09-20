@@ -3,8 +3,10 @@ const app = Vue.createApp({
         return {
             product: 'Socks',
             image: './assets/images/socks_green.jpg',
-            inStock: false,
-            inventory: 8,
+            inStock: true,
+            inventory: 100,
+            onSale: true,
+            activeColor: '#FF0000'
         }
     }
 })
